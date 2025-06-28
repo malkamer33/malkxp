@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malak | Code & PC - التكنولوجيا والبيسي</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #00d2ff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+      cursor: default;
+    }
+
+    .wrapper {
+      background: rgba(0, 18, 38, 0.85);
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 0 50px #00d2ff80;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(15px);
+      border: 2px solid #00d2ff33;
+      animation: fadeIn 1.2s ease forwards;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #00d2ff;
+      text-shadow:
+        0 0 5px #00d2ff,
+        0 0 10px #00d2ff,
+        0 0 20px #00d2ff,
+        0 0 40px #00d2ff80;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #6ed4ff;
+      margin-bottom: 40px;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      text-shadow: 0 0 5px #00a8e8;
+    }
+
+    .logo {
+      width: 150px;
+      margin: 0 auto 40px auto;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #00d2ffaa;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .logo img {
+      width: 100%;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+      gap: 25px;
+    }
+
+    .social-links a {
+      background: linear-gradient(135deg, #00d2ff 0%, #005f8c 100%);
+      color: #ffffff;
+      padding: 20px 0;
+      border-radius: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.35s ease;
+      box-shadow:
+        0 0 8px #00d2ffcc,
+        0 0 20px #00d2ff88;
+      user-select: none;
+      cursor: pointer;
+    }
+    .social-links a i {
+      font-size: 3.2rem;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 0 4px #00d2ff);
+    }
+    .social-links a span {
+      font-size: 1.1rem;
+      letter-spacing: 1.3px;
+      text-shadow: 0 0 8px #00d2ffbb;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-8px) scale(1.1);
+      box-shadow:
+        0 0 15px #00d2ffee,
+        0 0 40px #00d2ffcc;
+      background: linear-gradient(135deg, #00aaff, #003f66);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #0099ffcc;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 30px #00d2ffaa;
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 60px #00e0ffdd;
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Particles Container */
+    #particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+      background: transparent;
+    }
+
+    /* Individual particles */
+    .particle {
+      position: absolute;
+      background: #00d2ffcc;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatUp linear infinite;
+      filter: drop-shadow(0 0 6px #00d2ffcc);
+    }
+
+    /* Float animation */
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-150vh) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    @media(max-width: 500px) {
+      h1 {
+        font-size: 3rem;
+      }
+      .social-links {
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+      }
+      .social-links a {
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" role="main">
+    <div class="logo">
+      <img src="c:\Users\Sg716\OneDrive\Desktop\tik.jpg" alt="Malak Logo" />
+    </div>
+    <h1>Malak</h1>
+    <p class="subtitle">Code & PC | عالم التكنولوجيا والبيسي</p>
+    <div class="social-links" aria-label="روابط التواصل الاجتماعي">
+      <a href="https://www.youtube.com/@MalakPX" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube</span>
+      </a>
+      <a href="https://discord.gg/MvBgwsyzKP" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+        <i class="fab fa-discord"></i>
+        <span>Discord</span>
+      </a>
+      <a href="https://www.tiktok.com/@malak_gaming80" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+        <span>TikTok</span>
+      </a>
+      <a href="https://t.me/+3rpGBcaBoCQxZWE0" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <i class="fab fa-telegram"></i>
+        <span>Telegram</span>
+      </a>
+    </div>
+    <footer>
+      جميع الحقوق محفوظة &copy; 2025 - Malak Code & PC
+    </footer>
+  </div>
+
+  <!-- Particles container -->
+  <div id="particles"></div>
+
+  <script>
+    const particlesContainer = document.getElementById('particles');
+    const colors = ['#00d2ffcc', '#0099ffcc', '#33ccffff'];
+    const particleCount = 40;
+    const particles = [];
+
+    // Create particles
+    for(let i = 0; i < particleCount; i++) {
+      const p = document.createElement('div');
+      p.classList.add('particle');
+      p.style.width = `${3 + Math.random() * 5}px`;
+      p.style.height = p.style.width;
+      p.style.left = `${Math.random() * 100}vw`;
+      p.style.top = `${Math.random() * 100}vh`;
+      p.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      p.style.animationDuration = `${10 + Math.random() * 20}s`;
+      p.style.animationDelay = `${-Math.random() * 20}s`;
+      particlesContainer.appendChild(p);
+      particles.push(p);
+    }
+
+    // Mouse movement effect
+    document.addEventListener('mousemove', e => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      particles.forEach((p, i) => {
+        const speed = (i % 5 + 1) / 50;
+        const moveX = (x - 0.5) * speed * 50;
+        const moveY = (y - 0.5) * speed * 50;
+        p.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
